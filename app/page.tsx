@@ -23,16 +23,8 @@ export default function Home() {
       <section id="statement-large">
         <ContactBreakerOrange />
       </section>
-      <section id="story" className="w-full bg-[url('/images/bg-metal-hero.png')] bg-cover bg-center">
-        <div className="max-w-7xl mx-auto w-full px-6 pt-story-to-title">
-          <h2 className="font-jetbrains text-[54px] md:text-[72px] lg:text-[96px] font-thin uppercase leading-none tracking-widest mb-block-gap" style={{ letterSpacing: '0.06em' }}>
-            <span className="block">Our</span>
-            <span className="block">Story</span>
-            <div className="h-1 w-56 mt-4 bg-gradient-to-r from-tungstenOrange to-transparent" />
-          </h2>
-        </div>
+      <section id="story" className="w-full bg-black">
         <Story />
-        <div className="w-full h-story-to-breaker" />
       </section>
       <section id="people" className="w-full bg-metallic">
         <Operators />
