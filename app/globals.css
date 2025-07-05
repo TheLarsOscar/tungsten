@@ -1,1 +1,74 @@
-/* Global styles placeholder */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root/base styling */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace, system-ui, sans-serif;
+  color: #fff;
+}
+
+/* Typografi för ALLA rubriker */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'JetBrains Mono', monospace, system-ui, sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  font-family: 'JetBrains Mono', monospace, system-ui, sans-serif;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+}
+
+/* Länkar – grundfärg, hover */
+a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover,
+a:focus {
+  color: #FF7600; /* tungsten orange */
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Buttons – minimalistisk knapp */
+button {
+  font-family: 'JetBrains Mono', monospace, system-ui, sans-serif;
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.4em 1em;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s;
+}
+button:hover,
+button:focus {
+  color: #FF7600;
+  background: rgba(255, 118, 0, 0.08);
+  outline: none;
+}
+
+/* CSS-variabler för vertikal spacing */
+:root {
+  --vertical-space-desktop: 220px;
+  --vertical-space-tablet: 160px;
+  --vertical-space-mobile: 100px;
+  --breaker-small: 370px;
+  --breaker-large: 666px;
+}
+
+/* Tailwind utility för text-wrap */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

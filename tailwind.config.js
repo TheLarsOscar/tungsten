@@ -1,1 +1,97 @@
-// Tailwind CSS config placeholder
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        tungstenOrange: "#FF7600",
+        black: "#121212",
+        metallic: "#3B3B3B",
+        metallicLight: "#E0E0E0",
+        white: "#FFFFFF",
+      },
+      fontFamily: {
+        jetbrains: ['JetBrains Mono', 'monospace', 'system-ui', 'sans-serif'],
+      },
+      spacing: {
+        'nav': '48px',
+        'hero-logo-space': '220px',
+        'hero-logo-height': '270px',
+        'hero-title-space': '48px',
+        'hero-statementblock': '550px',
+        'hero-to-breaker': '220px',
+        'breaker-small': '370px',
+        'breaker-large': '666px',
+        'studio-to-title': '220px',
+        'studio-title-height': '144px',
+        'studio-title-to-text': '110px',
+        'studio-height': '870px',
+        'studio-to-breaker': '220px',
+        'operators-to-title': '220px',
+        'operators-title-height': '144px',
+        'operators-title-to-images': '180px',
+        'operators-image-height': '414px',
+        'operators-textblock-height': '860px',
+        'operators-to-breaker': '220px',
+        'work-to-title': '220px',
+        'work-title-height': '144px',
+        'work-title-to-content': '110px',
+        'work-contentblock-height': '3150px',
+        'work-to-breaker': '220px',
+        'heavy-to-title': '220px',
+        'heavy-title-height': '144px',
+        'heavy-title-to-content': '110px',
+        'heavy-contentblock-height': '1240px',
+        'heavy-to-breaker': '220px',
+        'footer': '666px',
+        'block-gap': '48px',
+        'headline-gap': '48px',
+        'grid-gap': '32px',
+        'grid-gap-mobile': '16px',
+        'content-offset': '128px', // Nytt: lagt till content-offset i spacing
+      },
+      height: {
+        'nav': '48px',
+        'breaker-small': '370px',
+        'breaker-large': '666px',
+        'footer': '666px',
+        'hero-logo': '270px',
+        'hero-statementblock': '550px',
+        'studio-title': '144px',
+        'studio': '870px',
+        'operators-title': '144px',
+        'operators-image': '414px',
+        'operators-textblock': '860px',
+        'work-title': '144px',
+        'work-contentblock': '3150px',
+        'heavy-title': '144px',
+        'heavy-contentblock': '1240px',
+      },
+      maxWidth: {
+        'container': '1200px',
+        '7xl': '80rem',
+        'content-max': '35vw', // Nytt: lagt till content-max i maxWidth
+      },
+      gridTemplateColumns: {
+        '12': 'repeat(12, minmax(0, 1fr))',
+      },
+      borderRadius: {
+        DEFAULT: '4px',
+        md: '8px',
+        lg: '16px',
+      },
+      screens: {
+        'mobile': '0px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px'
+      },
+    },
+  },
+  plugins: [],
+};

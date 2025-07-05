@@ -1,0 +1,49 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.tsx"],
+  theme: {
+    extend: {
+      colors: {
+        tungstenOrange: "#FF7600",
+        black: "#121212",
+        metallic: "#3B3B3B",
+        metallicLight: "#E0E0E0",
+        white: "#FFFFFF"
+      },
+      fontFamily: {
+        jetbrains: ['JetBrains Mono', 'monospace', 'system-ui', 'sans-serif']
+      },
+      spacing: {
+        // Globala vertikala avstånd och höjder enligt designen/skissen du laddat upp
+        'section-desktop': '220px',       // Standard vertikal spacing ovanför sektioner (desktop)
+        'section-mobile': '100px',        // Vertikal spacing mobil
+        'breaker-small': '370px',         // Höjd för små breakers
+        'breaker-large': '666px',         // Höjd för stora breakers
+        'block-gap': '48px',              // Avstånd mellan block i sektioner (t.ex. mellan rubrik och bild/text)
+        'headline-gap': '48px',           // Avstånd mellan rubrik och nästa block
+        'grid-gap': '32px',               // Avstånd mellan kolumner i grid på desktop
+        'grid-gap-mobile': '16px'         // Avstånd mellan kolumner på mobil
+      },
+      height: {
+        'breaker-small': '370px',
+        'breaker-large': '666px'
+      },
+      maxWidth: {
+        'container': '1200px',
+        '7xl': '80rem'
+      },
+      gridTemplateColumns: {
+        // 12-kolumners centrerat system
+        '12': 'repeat(12, minmax(0, 1fr))'
+      },
+      screens: {
+        'mobile': '0px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px'
+      }
+    }
+  },
+  plugins: [],
+};
