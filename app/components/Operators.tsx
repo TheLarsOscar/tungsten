@@ -12,7 +12,7 @@ export default function Operators() {
         <div className="lg:col-span-12 flex flex-col justify-end">
           <h2 className="font-jetbrains text-[54px] md:text-[72px] lg:text-[96px] font-thin uppercase leading-none tracking-widest" style={{ letterSpacing: '0.06em' }}>
             <span className="block">The</span>
-            <span className="block">Operators</span>
+            <span className="block">People</span>
             <div className="h-1 w-56 mt-4 bg-gradient-to-r from-tungstenOrange to-transparent" />
           </h2>
         </div>
