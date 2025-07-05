@@ -2,7 +2,6 @@
 
 import Hero from './components/Hero';
 import ContactBreakerOrange from './components/ContactBreakerOrange';
-import StatementBreakerLarge from './components/StatementBreakerLarge';
 import Studio from './components/Studio';
 import Operators from './components/Operators';
 import Work from './components/Work';
