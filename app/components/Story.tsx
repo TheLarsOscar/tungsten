@@ -227,20 +227,6 @@ export default function Story() {
             - Linjen under "OUR STORY" (scen 1, index 0) är nu flyttad och stylad så att den har exakt samma gradient, bredd och vänsterkolumn/padding som på "The Studio".
             - Linjen ligger direkt under titeln, inom samma grid och wrapper som text och rubrik, och är pixelperfekt vänsterställd/fadar ut i samma grid som titeln/texten under.
         */}
-        {!animating && current === 0 && (
-          <div className="absolute top-0 left-0 w-full z-30 pointer-events-none">
-            <div className="max-w-7xl mx-auto grid grid-cols-12">
-              <div className="col-span-12 md:col-span-10 lg:col-span-7 pl-6 md:pl-24">
-                <h1 className="font-jetbrains text-[54px] md:text-[72px] lg:text-[96px] font-thin uppercase text-white tracking-widest drop-shadow-xl mt-24 mb-0 text-left pointer-events-auto p-0 m-0">
-                  <span className="block leading-none">OUR</span>
-                  <span className="block leading-none">STORY</span>
-                </h1>
-                {/* Orange linje under "OUR STORY", exakt som på "The Studio", vänsterställd med textblocket */}
-                <div className="h-1 w-56 mt-4 bg-gradient-to-r from-tungstenOrange to-transparent" />
-              </div>
-            </div>
-          </div>
-        )}
         {/* Om ej animating, visa bara current slide utan animation */}
         {!animating && (
           <RenderSlide
