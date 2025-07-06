@@ -432,6 +432,12 @@ function RenderSlide({
             objectFit: 'cover',
           }}
           priority={true}
+          {...(idx === 0
+            ? {
+                placeholder: "blur",
+                blurDataURL: "/images/blur_s1_back_hslide_01.jpg",
+              }
+            : {})}
         />
       )}
       {/* MID: stöd för array eller sträng */}
