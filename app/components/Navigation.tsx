@@ -43,7 +43,7 @@ export default function Navigation() {
           <span key={item.name} className="flex items-center gap-2">
             <a
               href={item.href}
-              className="hover:font-bold hover:text-[#FF7600] transition duration-200 whitespace-nowrap no-underline"
+              className="hover-underline hover:text-[#FF7600] transition duration-200 whitespace-nowrap no-underline"
               onClick={(e) => smoothScroll(e, item.href)}
             >
               {item.name}
@@ -72,7 +72,7 @@ export default function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
-                className="hover:font-bold hover:text-[#FF7600] transition duration-200 no-underline"
+                className="hover-underline hover:text-[#FF7600] transition duration-200 no-underline"
                 onClick={(e) => smoothScroll(e, item.href)}
               >
                 {item.name}
