@@ -10,7 +10,7 @@ const slides = [
     year_place: "1779-Stockholm",
     title: "Glamming in the Shadows",
     text: " Back in the olden days—the second era of Swedish glam, during the reign of King Gustav III, our very own let-them-eat-cake monarch—there were people quietly getting the job done in the background.\nChemists, writers, miners, and other unsung consultants, busy doing the actual heavy lifting, while someone else took the spotlight (and probably the cake).",
-    back: '/images/w74_s1_back_hslide_01.png',
+    back: '/images/w74_s1_back_hslide_01.jpg',
     mid: ['/images/w74_s1_mid_hslide_01.png'],
     fore: [
       '/images/w74_s1_fore_hslide_01.png'
@@ -20,7 +20,7 @@ const slides = [
     year_place: "1781-Köping",
     title: "Master of Ghost Chemistry",
     text: "One of these humble heroes was Carl Wilhelm Scheele, a quiet, intensely curious, and typically dry-as-they-come Swede. In 1781, he picked up and examined a super cumbersome sample—a rock so heavy it was hard to lift. Unknown substance. Scheele simply journaled the world-unique discovery as “tung sten”—literally, heavy stone in Swedish.\n\nScheele was a simply put specialist in humble understatement. Oxygen, chlorine, manganese, you name it—he’d discover it, journal it, and let someone else accept the standing ovation. The man basically invented ghostwriting, only for chemistry.",
-    back: '/images/w74_s2_back_hslide_01.png',
+    back: '/images/w74_s2_back_hslide_01.jpg',
     mid: ['/images/w74_s2_mid_hslide_01.png'],
     fore: ['/images/w74_s2_fore_hslide_01.png'],
   },
@@ -28,7 +28,7 @@ const slides = [
     year_place: "1882-Zinwald",
     title: "Inside you there are no wolves fighting",
     text: "Imagine being a German tin miner. Deep underground. Total horrible darkness. Sweat, soot, and stench. No fun.\nNow imagine a dark, cursed metal that eats your precious tin and your efforts — like a hungry wolf, frothing at the jaws. Not popular.\n\nWolfram? That’s just German for “the white stuff that accumulates in the corners of an aggravated wolf’s mouth.”\nNuance and Germans: never shall those two meet.",
-    back: '/images/w74_s3_back_hslide_01.png',
+    back: '/images/w74_s3_back_hslide_01.jpg',
     mid: [
       '/images/w74_s3_mid_hslide_01.png',
     ],
@@ -39,7 +39,7 @@ const slides = [
     title: "¿Dónde está el wolframio?",
     text:
       "Enter, the glory hounds—the Elhuyar brothers of Spain. They saw use in the mysterious stone. Did they call it “tungsten” like Scheele? No. Did they name it for its actual property—“the stuff that ruins tin”? Also no.\n\nNein und nein, mein Schatzi. Instead, they went full proto-Wagner and chose dramatic flair. ¡Sí, sí, sí, señor! Al lobo y a los mineros de Alemania.\n\nEs un mineral llamado wolframio.",
-    back: '/images/w74_s4_back_hslide_01.png',
+    back: '/images/w74_s4_back_hslide_01.jpg',
     mid: ['/images/w74_s4_mid_hslide_01.png'],
     fore: ['/images/w74_s4_fore_hslide_01.png'],
   },
@@ -47,7 +47,7 @@ const slides = [
     year_place: "1869-St. Petersburg",
     title: "Dubya Seventy-four. Period.",
     text: "Enter angry Mendeleev. Fueled by vodka and a inferiority complex the size of Siberia, he was certainly no tsarist favorite —just an angry pleb with wild hair and the kind of OCD bureaucracy you only get after generations of крепостные крестьяне (Russian serfdom).\n\nHe puts it all in a table —every element in its place, every symbol, every number. Period.\n\nW for Wolfram, of course. For maximum confusion and cross-border paperwork. W74. Period.",
-    back: '/images/w74_s5_back_hslide_01.png',
+    back: '/images/w74_s5_back_hslide_01.jpg',
     mid: ['/images/w74_s5_mid_hslide_01.png'],
     fore: ['/images/w74_s5_fore_hslide_01.png'],
   },
@@ -55,7 +55,7 @@ const slides = [
     year_place: "2025-Svedala",
     title: "Respecting the heavy rock",
     text: "Despite all the drama and international confusion, we rather sympathise with Scheele and those miners—quiet brilliance, honest, blunt, rational, yet quietly emotional about their daily frustrations.\n\nSo here we are now, entertain us: a down-to-earth consultancy, a mosquito, crafting pretentious texts, doing your work, while quietly admiring typically Swedish humility.\nThis is our origin story. Heavy stone.\nSeventy-four. Our libido.",
-    back: '/images/w74_s6_back_hslide_01.png',
+    back: '/images/w74_s6_back_hslide_01.jpg',
     mid: [
       '/images/w74_s6_mid_hslide_01.png',
       '/images/w74_s6_mid_hslide_02.png',
@@ -220,7 +220,7 @@ export default function Story() {
     <section id="story" className="relative w-screen h-screen overflow-hidden bg-black select-none z-20">
       {/* Nytt: Bakgrundsvideo och gradient overlay, samma som i Hero. Dessa ligger längst bak. */}
       {/* Kommentar på svenska: Bakgrundsvideo och gradient overlay inlagda överst i sektionen */}
-      <video src="/background/hero-video.mp4" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0" style={{ objectFit: "cover" }} />
+      {/* <video src="/background/hero-video.mp4" autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover z-0" style={{ objectFit: "cover" }} /> */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/90 z-10" />
       <div className="relative w-full h-full overflow-hidden">
         {/* ÄNDRAT (på svenska): 
