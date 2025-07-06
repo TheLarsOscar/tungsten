@@ -52,9 +52,18 @@ const slides = [
     fore: ['/images/w74_s5_fore_hslide_01.png'],
   },
   {
-    year_place: "2025-Svedala",
+    year_place: "2025-MØ+STHLM",
     title: "Respecting the heavy rock",
-    text: "Despite all the drama and international confusion, we rather sympathise with Scheele and those miners—quiet brilliance, honest, blunt, rational, yet quietly emotional about their daily frustrations.\n\nSo here we are now, entertain us: a down-to-earth consultancy, a mosquito, crafting pretentious texts, doing your work, while quietly admiring typically Swedish humility.\nThis is our origin story. Heavy stone.\nSeventy-four. Our libido.",
+    text: `Despite all the drama and international confusion, we rather sympathise with Scheele and those miners —quiet brilliance, honest, blunt, rational, yet quietly emotional about their daily frustrations.
+
+So here we are now, entertain us: a down-to-earth consultancy, a mosquito, crafting pretentious texts, doing your work, while quietly admiring typically Swedish humility.
+
+This is our origin story. 
+
+Heavy stone
+Seventy-four
+Our libido.
+`,
     back: '/images/w74_s6_back_hslide_01.jpg',
     mid: [
       '/images/w74_s6_mid_hslide_01.png',
@@ -90,8 +99,8 @@ export default function Story() {
     nextIndexRef.current = newIndex;
     animStartRef.current = null;
 
-    // ÄNDRAT: Ändra slide-animationens varaktighet från 800ms till 1400ms för längre wow-effekt
-    const duration = 1400; // 1400ms animation
+    // ÄNDRAT: Ändra slide-animationens varaktighet från 800ms till 1000ms för snabbare animation
+    const duration = 1000; // 1000ms animation
 
     const step = (timestamp: number) => {
       if (!animStartRef.current) animStartRef.current = timestamp;
@@ -521,7 +530,7 @@ function RenderSlide({
         className="absolute inset-0 flex flex-col justify-center z-200 items-start"
         style={{ zIndex: 200 }}
       >
-        <div className="w-full pl-4 pr-4 md:ml-[256px] md:max-w-[25vw]">
+        <div className="w-full px-4 md:mx-auto md:max-w-xl text-center">
           <div className={`inline-block rounded-lg px-6 py-4 ${
             idx === 2 || idx === 5
               ? 'bg-black/70'
