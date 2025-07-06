@@ -142,52 +142,6 @@ export default function Work() {
             </div>
           ))}
         </div>
-
-        <div ref={parallaxRef} className="w-full flex justify-center items-end mt-[180px] mb-[180px]">
-          <div className="flex-shrink-0 w-[190px] md:w-[250px] mr-8">
-            <motion.div style={{ y }}>
-              <Image
-                src="/images/work_00_left.webp"
-                alt="Scandinavian Spaceship"
-                width={250}
-                height={350}
-                className="rounded object-cover w-full"
-                priority
-              />
-            </motion.div>
-          </div>
-          <div className="leading-relaxed">
-            <p className="font-mono text-[18px] italic text-white/80">
-              We never saw attack ships on fire off the shoulder of Orion.<br />
-              Neither did we watch C-beams glitter in the dark near the Tannhäuser Gate.
-            </p>
-            <p className="font-mono text-[18px] italic text-white/80 mt-block-gap">
-              But there were industrial giants,<br />
-              cultural institutions,<br />
-              Nordic cities, public broadcasters,<br />
-              R&amp;D labs, transport authorities,<br />
-              architects, mobility startups,<br />
-              governments, universities, foundations,<br />
-              think tanks, banks, publishers,<br />
-              manufacturers, infrastructure providers—<br />
-              and, yes, more than one international music competition.
-            </p>
-            <p className="font-mono text-[18px] italic text-white/80 mt-block-gap">
-              Some public tenders were won. No nepotism.<br />
-              and we have been scrutinized by national security.<br />
-              Some of us even passed.
-            </p>
-            <p className="font-mono text-[18px] italic text-white/80 mt-block-gap">
-              Sometimes a sharp corner. Sometimes a trick up a sleeve.<br />
-              But more importantly, we did cry—same as you—<br />
-              when Roy Batty gave his final words, high above the city.
-            </p>
-            <p className="font-mono text-[18px] italic text-white/80 mt-block-gap">
-              Replicant or consultant—<br />
-              all those moments will be lost in time, like tears in rain.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

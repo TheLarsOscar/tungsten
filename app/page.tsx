@@ -1,6 +1,7 @@
 'use client';
 
 import Hero from './components/Hero';
+import Contact from './components/Contact';
 import ContactBreakerOrange from './components/ContactBreakerOrange';
 import Studio from './components/Studio';
 import Operators from './components/Operators';
@@ -34,6 +35,7 @@ export default function Home() {
       <section id="our-work" className="w-full bg-black">
         <Work />
       </section>
+      <Contact />
     </main>
   );
 }
