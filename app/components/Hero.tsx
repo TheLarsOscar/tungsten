@@ -25,7 +25,7 @@ export default function Hero() {
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/90"></div>
 
-      <div className="relative z-10 flex flex-col items-start justify-center px-6 md:px-12 lg:px-24 pt-[220px] pb-[220px] max-w-7xl">
+      <div className="relative z-10 flex flex-col items-start justify-center px-6 md:px-12 lg:px-24 pt-gap-2xl pb-gap-2xl max-w-container">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -37,7 +37,7 @@ export default function Hero() {
             alt="Tungsten Hero Logo" 
             width={1200} 
             height={300} 
-            className="w-full h-auto max-w-[1200px]"
+            className="w-full h-logo max-w-container"
           />
         </motion.div>
 
