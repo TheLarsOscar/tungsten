@@ -57,14 +57,6 @@ button:focus {
   outline: none;
 }
 
-/* CSS-variabler för vertikal spacing */
-:root {
-  --vertical-space-desktop: 220px;
-  --vertical-space-tablet: 160px;
-  --vertical-space-mobile: 100px;
-  --breaker-small: 370px;
-  --breaker-large: 666px;
-}
 
 /* Tailwind utility för text-wrap */
 @layer utilities {
