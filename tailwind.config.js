@@ -1,4 +1,4 @@
-/ ** @type {import('tailwindcss').Config} * /
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -7,23 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      /*
-       * SYSTEM TOKENS – THE ONE LIST (2024-07-07)
-       * Unified, logical token naming for all spacing, heights, offsets, colors, and max-widths.
-       * Use ONLY these tokens in all new/refactored code.
-       * Keep all legacy tokens below until migration is 100% complete.
-       */
       colors: {
-        'brand-orange': "#FF7600",
-        'black': "#121212",
-        'metallic': "#3B3B3B",
-        'metallic-light': "#E0E0E0",
-        'white': "#FFFFFF",
+        tungstenOrange: "#FF7600",
+        black: "#121212",
+        metallic: "#3B3B3B",
+        metallicLight: "#E0E0E0",
+        white: "#FFFFFF",
       },
       fontFamily: {
-        'sans': ['JetBrains Mono', 'monospace', 'system-ui', 'sans-serif'],
+        jetbrains: ['JetBrains Mono', 'monospace', 'system-ui', 'sans-serif'],
       },
       spacing: {
+        // --- SYSTEM TOKENS – THE ONE LIST (2024-07-07) ---
         'gap-xs': '16px',         // former grid-gap-mobile
         'gap-sm': '32px',         // former grid-gap
         'gap-md': '48px',         // block-gap, headline-gap, nav, hero-title-space
@@ -38,36 +33,8 @@ module.exports = {
         'section-height': '870px',      // studio, etc
         'contentblock-height': '3150px',// work-contentblock
         'large-contentblock-height': '1240px', // heavy-contentblock
-      },
-      maxWidth: {
-        container: '1200px',
-        '7xl': '80rem',
-        'content-max': '35vw',
-      },
-      gridTemplateColumns: {
-        12: 'repeat(12, minmax(0, 1fr))',
-      },
-      screens: {
-        'mobile': '0px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
-        '2xl': '1536px'
-      },
 
-      // --- LEGACY TOKENS BELOW ---
-      // (do not use for new code; remove when migration is complete)
-      colors: {
-        tungstenOrange: "#FF7600",
-        black: "#121212",
-        metallic: "#3B3B3B",
-        metallicLight: "#E0E0E0",
-        white: "#FFFFFF",
-      },
-      fontFamily: {
-        jetbrains: ['JetBrains Mono', 'monospace', 'system-ui', 'sans-serif'],
-      },
-      spacing: {
+        // --- LEGACY TOKENS BELOW ---
         'nav': '48px',
         'hero-logo-space': '220px',
         'hero-logo-height': '270px',
@@ -105,21 +72,31 @@ module.exports = {
         'content-offset': '128px', // Nytt: lagt till content-offset i spacing
       },
       height: {
+        // --- GENERIC TOKENS (SYSTEM TOKENS) ---
         'nav': '48px',
-        'breaker-small': '370px',
-        'breaker-large': '666px',
+        'logo': '270px',
+        'section-title': '144px',
+        'section': '870px',
+        'image': '414px',
+        'textblock': '860px',
+        'contentblock': '3150px',
+        'large-contentblock': '1240px',
         'footer': '666px',
-        'hero-logo': '270px',
-        'hero-statementblock': '550px',
-        'studio-title': '144px',
-        'studio': '870px',
-        'operators-title': '144px',
-        'operators-image': '414px',
-        'operators-textblock': '860px',
-        'work-title': '144px',
-        'work-contentblock': '3150px',
-        'heavy-title': '144px',
-        'heavy-contentblock': '1240px',
+
+        // --- LEGACY TOKENS (with -legacy suffix) ---
+        'breaker-small-legacy': '370px',
+        'breaker-large-legacy': '666px',
+        'hero-logo-legacy': '270px',
+        'hero-statementblock-legacy': '550px',
+        'studio-title-legacy': '144px',
+        'studio-legacy': '870px',
+        'operators-title-legacy': '144px',
+        'operators-image-legacy': '414px',
+        'operators-textblock-legacy': '860px',
+        'work-title-legacy': '144px',
+        'work-contentblock-legacy': '3150px',
+        'heavy-title-legacy': '144px',
+        'heavy-contentblock-legacy': '1240px',
       },
       maxWidth: {
         'container': '1200px',

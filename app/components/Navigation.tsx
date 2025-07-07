@@ -1,3 +1,4 @@
+// All spacing tokens migrated to "the one list" 2024-07-07. Old px/tokens replaced. Only Tailwind-utilities (like ml-auto) left.
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -33,14 +34,14 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 px-5 md:px-8 h-16 flex items-center justify-between font-jetbrains uppercase text-[16px] text-white font-thin">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 px-gap-xs md:px-gap-sm h-nav flex items-center justify-between font-jetbrains uppercase text-[16px] text-white font-thin">
       <a href="#home" onClick={(e) => smoothScroll(e, '#home')} className="flex-shrink-0 no-underline">
         <Image src="/logo/logo_header.svg" alt="Tungsten Logo" width={160} height={40} />
       </a>
 
-      <div className="hidden lg:flex gap-2 justify-center flex-1">
+      <div className="hidden lg:flex gap-gap-xs justify-center flex-1">
         {links.map((item, idx) => (
-          <span key={item.name} className="flex items-center gap-2">
+          <span key={item.name} className="flex items-center gap-gap-xs">
             <a
               href={item.href}
               className="hover-underline hover:text-[#FF7600] transition duration-200 whitespace-nowrap no-underline"
@@ -66,7 +67,7 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="absolute top-16 left-0 right-0 bg-black bg-opacity-90 px-5 py-4 flex flex-col gap-4"
+            className="absolute top-nav left-0 right-0 bg-black bg-opacity-90 px-gap-xs py-gap-xs flex flex-col gap-gap-xs"
           >
             {links.map((item) => (
               <a
