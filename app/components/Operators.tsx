@@ -5,14 +5,14 @@ export default function Operators() {
   return (
     <section
       id="operators"
-      className="w-full pt-operators-to-title pb-operators-to-breaker bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
+      className="w-full pt-gap-2xl pb-gap-2xl bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
     >
-      <div className="max-w-7xl mx-auto w-full px-6">
+      <div className="max-w-container mx-auto w-full px-6">
         {/* Rubrik */}
         <div className="lg:col-span-12 flex flex-col justify-end">
           <h2 className="font-jetbrains text-[54px] md:text-[72px] lg:text-[96px] font-thin uppercase leading-none tracking-widest" style={{ letterSpacing: '0.06em' }}>
-            <span className="block">The</span>
-            <span className="block">People</span>
+            <span className="block">Hello</span>
+            <span className="block">Operator</span>
             <div className="h-1 w-56 mt-4 bg-gradient-to-r from-tungstenOrange to-transparent" />
           </h2>
         </div>
@@ -29,10 +29,10 @@ export default function Operators() {
               alt="The Strategist"
               width={320}
               height={320}
-              className="h-operators-image w-auto rounded mb-6"
+              className="h-image w-auto rounded mb-6"
               style={{ objectFit: 'cover' }}
             />
-            <div className="max-h-operators-textblock text-left">
+            <div className="max-h-textblock text-left">
               <div className="font-thin text-3xl uppercase mt-6 mb-4 tracking-wide text-center">The Strategist</div>
               <p className="font-mono text-[16px] whitespace-pre-line leading-snug">
                 <span className="font-bold">Lars Oscar Lyberg</span> is a senior advisor within strategy, communication, and transformation. With a background rooted in Swedish export industry, he has led complex initiatives across automotive, infrastructure, real estate, and the public sector. His work focuses on aligning long-term strategy with real-world implementation – often navigating the space between digital transformation, stakeholder alignment, and measurable results.<br /><br />
@@ -47,10 +47,10 @@ export default function Operators() {
               alt="The Technologist"
               width={320}
               height={320}
-              className="h-operators-image w-auto rounded mb-6"
+              className="h-image w-auto rounded mb-6"
               style={{ objectFit: 'cover' }}
             />
-            <div className="max-h-operators-textblock text-left">
+            <div className="max-h-textblock text-left">
               <div className="font-thin text-3xl uppercase mt-6 mb-4 tracking-wide text-center">The Technologist</div>
               <p className="font-mono text-[16px] whitespace-pre-line leading-snug">
                 <span className="font-bold">Morgan Fredriksson</span> is a senior technologist and platform strategist with deep experience in system design, applied AI, and modular infrastructure. As CEO and co-founder of Nagoon, he leads projects that integrate technical scalability with long-term operational relevance – often in collaboration with research institutions and leading industry partners.<br /><br />
@@ -65,10 +65,10 @@ export default function Operators() {
               alt="The Creative"
               width={320}
               height={320}
-              className="h-operators-image w-auto rounded mb-6"
+              className="h-image w-auto rounded mb-6"
               style={{ objectFit: 'cover' }}
             />
-            <div className="max-h-operators-textblock text-left">
+            <div className="max-h-textblock text-left">
               <div className="font-thin text-3xl uppercase mt-6 mb-4 tracking-wide text-center">The Creative</div>
               <p className="font-mono text-[16px] whitespace-pre-line leading-snug">
                 <span className="font-bold">Per Cromwell</span> is a creative director and innovation strategist with a background in communication, design, and concept development. Over the past two decades, he has co-founded and led a wide range of ventures and projects—spanning everything from guerrilla marketing and tactical media to sustainable retail and speculative design. His work often explores the boundaries between technology, culture, and public engagement.<br /><br />
