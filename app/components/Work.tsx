@@ -60,15 +60,15 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="w-full pt-[220px] pb-work-to-breaker bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
+      className="w-full pt-gap-2xl pb-gap-2xl bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
     >
-      <div className="max-w-7xl mx-auto w-full px-6">
+      <div className="max-w-container mx-auto w-full px-6">
         {/* Rubrik med underline och spacing */}
         <div className="flex flex-col items-start justify-end">
           <h2 className="font-jetbrains text-[72px] md:text-[96px] font-thin uppercase leading-none tracking-widest mb-0" style={{ letterSpacing: '0.06em' }}>
             Our Work
           </h2>
-          <div className="h-1 w-56 bg-gradient-to-r from-tungstenOrange to-transparent mb-[100px]" />
+          <div className="h-1 w-56 bg-gradient-to-r from-tungstenOrange to-transparent mb-gap-xl" />
         </div>
 
         {/* Schackruta med tight grid */}
@@ -88,7 +88,7 @@ export default function Work() {
                   ${item.imageOnRight ? "md:items-end md:text-right pr-8" : "md:items-start md:text-left pl-8"}
                   py-[55px] md:py-0
                 `}
-                style={{ minHeight: '414px' }}
+                style={{ minHeight: '414px' }} // (no token for minHeight, leave as is)
               >
                 <h3 className="font-jetbrains text-[36px] md:text-[48px] font-thin uppercase leading-tight mb-4 tracking-wide">
                   {item.title}
@@ -122,7 +122,7 @@ export default function Work() {
                   return (
                     <div
                       ref={ref}
-                      className="overflow-hidden h-[414px] md:h-[414px] w-full flex items-center justify-center"
+                      className="overflow-hidden h-image md:h-image w-full flex items-center justify-center"
                       style={{ width: '100%' }}
                     >
                       <motion.div style={{ y, width: '100%' }}>
@@ -131,7 +131,7 @@ export default function Work() {
                           alt={item.title}
                           width={480}
                           height={540}
-                          className="rounded w-full object-cover h-[540px] max-w-[480px] md:max-w-none"
+                          className="rounded w-full object-cover h-hero-img max-w-img md:max-w-none"
                           priority
                         />
                       </motion.div>

@@ -19,7 +19,7 @@ export default function Contact() {
   const skylineY = useTransform(skylineScroll, [0, 1], [0, 250]);
 
   return (
-    <section id="contact" className="relative bg-black text-white w-full min-h-[1800px] lg:min-h-[2040px] overflow-hidden font-jetbrains">
+    <section id="contact" className="relative bg-black text-white w-full min-h-contact lg:min-h-[2040px] overflow-hidden font-jetbrains">
       {/* Background Video */}
       <video
         autoPlay
@@ -53,14 +53,14 @@ export default function Contact() {
           priority
         />
       </motion.div>
-      <div className="relative z-10 w-full flex flex-col items-center gap-10 px-4 sm:px-6">
-        <div className="w-full text-left mt-[220px] pl-content-offset studio-title">
+      <div className="relative z-10 w-full flex flex-col items-center px-4 sm:px-6">
+        <div className="w-full text-left mt-gap-2xl pl-content-offset studio-title">
           <h2 className="font-jetbrains text-[56px] md:text-[96px] font-thin uppercase leading-none tracking-widest mb-0" style={{ letterSpacing: '0.06em' }}>
             Contact
           </h2>
-          <div className="h-1 w-56 bg-gradient-to-r from-tungstenOrange to-transparent mb-[60px]" />
+          <div className="h-1 w-56 bg-gradient-to-r from-tungstenOrange to-transparent" />
         </div>
-        <div className="max-w-[750px] w-full mx-auto text-left">
+        <div className="max-w-[750px] w-full mx-auto text-left mt-gap-lg">
           <div className="font-jetbrains text-[18px] md:text-[27px] uppercase text-white tracking-widest break-words">
             <div>[W74] Tungsten</div>
             <div>
@@ -110,7 +110,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="max-w-[750px] w-full mx-auto text-left font-mono text-[18px] md:text-[20px] leading-relaxed space-y-5 mt-[60px]">
+        <div className="max-w-[750px] w-full mx-auto text-left font-mono text-[18px] md:text-[20px] leading-relaxed mt-gap-md">
           <p>
             We never saw attack ships on fire—<br />
             off the shoulder of Orion.<br />
