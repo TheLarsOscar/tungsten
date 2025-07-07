@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer id="footer" className="relative bg-[#232325] text-white w-full min-h-[600px] lg:min-h-[740px] flex flex-col justify-end overflow-hidden font-jetbrains">
+    <footer id="footer" className="relative bg-[#232325] text-white w-full min-h-footer lg:min-h-footer-lg flex flex-col justify-end overflow-hidden font-jetbrains">
       {/* Content grid */}
       <div className="relative z-10 w-full max-w-container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-grid-gap-mobile lg:gap-grid-gap items-end pb-8 lg:pb-0">
       </div>
@@ -15,7 +15,7 @@ export default function Footer() {
           alt="[W74] TUNGSTEN"
           width={320}
           height={99}
-          className="w-[220px] h-auto object-contain"
+          className="w-logo h-auto object-contain"
           priority
         />
       </div>
@@ -38,7 +38,7 @@ export default function Footer() {
           alt="[W74] TUNGSTEN"
           width={860}
           height={265}
-          className="w-[430px] h-auto lg:w-[860px] max-w-none object-contain"
+          className="w-logo-lg h-auto lg:w-logo-xl max-w-none object-contain"
           priority
         />
       </div>

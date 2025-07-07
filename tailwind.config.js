@@ -33,43 +33,6 @@ module.exports = {
         'section-height': '870px',      // studio, etc
         'contentblock-height': '3150px',// work-contentblock
         'large-contentblock-height': '1240px', // heavy-contentblock
-
-        // --- LEGACY TOKENS BELOW ---
-        'nav': '48px',
-        'hero-logo-space': '220px',
-        'hero-logo-height': '270px',
-        'hero-title-space': '48px',
-        'hero-statementblock': '550px',
-        'hero-to-breaker': '220px',
-        'breaker-small': '370px',
-        'breaker-large': '666px',
-        'studio-to-title': '220px',
-        'studio-title-height': '144px',
-        'studio-title-to-text': '110px',
-        'studio-height': '870px',
-        'studio-to-breaker': '220px',
-        'operators-to-title': '220px',
-        'operators-title-height': '144px',
-        'operators-title-to-images': '180px',
-        'operators-image-height': '414px',
-        'operators-textblock-height': '860px',
-        'operators-to-breaker': '220px',
-        'work-to-title': '220px',
-        'work-title-height': '144px',
-        'work-title-to-content': '110px',
-        'work-contentblock-height': '3150px',
-        'work-to-breaker': '220px',
-        'heavy-to-title': '220px',
-        'heavy-title-height': '144px',
-        'heavy-title-to-content': '110px',
-        'heavy-contentblock-height': '1240px',
-        'heavy-to-breaker': '220px',
-        'footer': '666px',
-        'block-gap': '48px',
-        'headline-gap': '48px',
-        'grid-gap': '32px',
-        'grid-gap-mobile': '16px',
-        'content-offset': '128px', // Nytt: lagt till content-offset i spacing
       },
       height: {
         // --- GENERIC TOKENS (SYSTEM TOKENS) ---
@@ -82,29 +45,17 @@ module.exports = {
         'contentblock': '3150px',
         'large-contentblock': '1240px',
         'footer': '666px',
-
         // --- ICON BUTTONS ---
         'icon-btn': '160px',
         'icon-btn-lg': '220px',
-
-        // --- LEGACY TOKENS (with -legacy suffix) ---
-        'breaker-small-legacy': '370px',
-        'breaker-large-legacy': '666px',
-        'hero-logo-legacy': '270px',
-        'hero-statementblock-legacy': '550px',
-        'studio-title-legacy': '144px',
-        'studio-legacy': '870px',
-        'operators-title-legacy': '144px',
-        'operators-image-legacy': '414px',
-        'operators-textblock-legacy': '860px',
-        'work-title-legacy': '144px',
-        'work-contentblock-legacy': '3150px',
-        'heavy-title-legacy': '144px',
-        'heavy-contentblock-legacy': '1240px',
       },
       width: {
         'icon-btn': '160px',
         'icon-btn-lg': '220px',
+      },
+      minHeight: {
+        'footer': '600px',
+        'footer-lg': '740px',
       },
       maxWidth: {
         'container': '1200px',
