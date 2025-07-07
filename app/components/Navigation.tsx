@@ -10,7 +10,7 @@ export default function Navigation() {
     { name: 'HOME', href: '#home' },
     { name: 'THE STUDIO', href: '#the-studio' },
     { name: 'OUR STORY', href: '#story' },
-    { name: 'THE PEOPLE', href: '#people' },
+    { name: 'OPERATORS', href: '#people' },
     { name: 'OUR WORK', href: '#our-work' },
     { name: 'CONTACT US', href: '#footer' },
   ];
