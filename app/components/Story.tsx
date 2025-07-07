@@ -365,7 +365,7 @@ export default function Story() {
           )
         }
         aria-label="Föregående slide"
-        className="absolute z-50 flex items-center justify-center aspect-square w-[10rem] h-[10rem] bg-black/40 opacity-80 hover:opacity-100 cursor-pointer select-none outline-none
+        className="absolute z-50 flex items-center justify-center aspect-square w-icon-btn h-icon-btn md:w-icon-btn-lg md:h-icon-btn-lg bg-black/40 opacity-80 hover:opacity-100 cursor-pointer select-none outline-none
           max-md:top-[85%] max-md:left-4 md:top-1/2 md:left-0
           -translate-y-1/2"
         style={{ WebkitTapHighlightColor: 'transparent' }}
@@ -380,7 +380,7 @@ export default function Story() {
           )
         }
         aria-label="Nästa slide"
-        className="absolute z-50 flex items-center justify-center aspect-square w-[10rem] h-[10rem] bg-black/40 opacity-80 hover:opacity-100 cursor-pointer select-none outline-none
+        className="absolute z-50 flex items-center justify-center aspect-square w-icon-btn h-icon-btn md:w-icon-btn-lg md:h-icon-btn-lg bg-black/40 opacity-80 hover:opacity-100 cursor-pointer select-none outline-none
           max-md:top-[85%] max-md:right-4 md:top-1/2 md:right-0
           -translate-y-1/2"
         style={{ WebkitTapHighlightColor: 'transparent' }}

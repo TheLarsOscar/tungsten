@@ -83,6 +83,10 @@ module.exports = {
         'large-contentblock': '1240px',
         'footer': '666px',
 
+        // --- ICON BUTTONS ---
+        'icon-btn': '160px',
+        'icon-btn-lg': '220px',
+
         // --- LEGACY TOKENS (with -legacy suffix) ---
         'breaker-small-legacy': '370px',
         'breaker-large-legacy': '666px',
@@ -97,6 +101,10 @@ module.exports = {
         'work-contentblock-legacy': '3150px',
         'heavy-title-legacy': '144px',
         'heavy-contentblock-legacy': '1240px',
+      },
+      width: {
+        'icon-btn': '160px',
+        'icon-btn-lg': '220px',
       },
       maxWidth: {
         'container': '1200px',

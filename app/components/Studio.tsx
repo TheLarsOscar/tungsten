@@ -6,9 +6,9 @@ export default function Studio() {
   return (
     <section
       id="studio"
-      className="w-full pt-studio-to-title pb-studio-to-breaker bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
+      className="w-full pt-gap-2xl pb-gap-2xl bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
     >
-      <div className="max-w-7xl mx-auto w-full px-6">
+      <div className="max-w-container mx-auto w-full px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Sidtitel tillagd högst upp i grid-layouten, som första grid-item */}
           <div className="lg:col-span-12 col-span-1 flex flex-col mb-12">
