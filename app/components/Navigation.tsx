@@ -1,4 +1,3 @@
-// All spacing tokens migrated to "the one list" 2024-07-07. Old px/tokens replaced. Only Tailwind-utilities (like ml-auto) left.
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -12,14 +11,14 @@ export default function Navigation() {
     { name: 'OUR STORY', href: '#story' },
     { name: 'OPERATORS', href: '#people' },
     { name: 'OUR WORK', href: '#our-work' },
-    { name: 'CONTACT US', href: '#footer' },
+    { name: 'CONTACT US', href: '#contact' },
   ];
 
   const smoothScroll = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
-      const headerOffset = 70;
+      const headerOffset = 0;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 

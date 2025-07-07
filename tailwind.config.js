@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  safelist: [
+    'scroll-mt-nav',
+  ],
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -33,6 +36,9 @@ module.exports = {
         'section-height': '870px',      // studio, etc
         'contentblock-height': '3150px',// work-contentblock
         'large-contentblock-height': '1240px', // heavy-contentblock
+      },
+      scrollMargin: {
+        'nav': '148px',
       },
       height: {
         // --- GENERIC TOKENS (SYSTEM TOKENS) ---

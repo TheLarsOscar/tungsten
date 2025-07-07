@@ -11,31 +11,33 @@ import Story from './components/Story';
 export default function Home() {
   return (
     <main className="font-jetbrains bg-black text-white">
-      <section id="home">
+      <section id="home" className="scroll-mt-nav">
         <Hero />
       </section>
-      <section id="contact-orange-1">
+      <section id="contact-orange-1" className="scroll-mt-nav">
         <ContactBreakerOrange />
       </section>
-      <section id="the-studio" className="w-full bg-black">
+      <section id="the-studio" className="w-full bg-black scroll-mt-nav">
         <Studio />
       </section>
-      <section id="statement-large">
+      <section id="statement-large" className="scroll-mt-nav">
         <ContactBreakerOrange />
       </section>
-      <section id="story" className="w-full bg-black">
+      <section id="story" className="w-full bg-black scroll-mt-nav">
         <Story />
       </section>
-      <section id="people" className="w-full bg-metallic">
+      <section id="people" className="w-full bg-metallic scroll-mt-nav">
         <Operators />
       </section>
-      <section id="contact-orange-2">
+      <section id="contact-orange-2" className="scroll-mt-nav">
         <ContactBreakerOrange />
       </section>
-      <section id="our-work" className="w-full bg-black">
+      <section id="our-work" className="w-full bg-black scroll-mt-nav">
         <Work />
       </section>
-      <Contact />
+      <section id="contact" className="scroll-mt-nav">
+        <Contact />
+      </section>
     </main>
   );
 }
