@@ -11,6 +11,13 @@ export default function Contact() {
   });
   const y = useTransform(scrollYProgress, [0, 1], [0, -1000]);
 
+  const skylineRef = useRef(null);
+  const { scrollYProgress: skylineScroll } = useScroll({
+    target: skylineRef,
+    offset: ['start end', 'end start'],
+  });
+  const skylineY = useTransform(skylineScroll, [0, 1], [0, 250]);
+
   return (
     <section id="contact" className="relative bg-black text-white w-full min-h-[1800px] lg:min-h-[2040px] overflow-hidden font-jetbrains">
       {/* Background Video */}
@@ -32,15 +39,21 @@ export default function Contact() {
           background: "linear-gradient(to bottom, rgba(20,20,30,0.9) 0%, rgba(20,20,30,0) 100%)"
         }}
       />
-      <Image
-        src="/images/Contact_Back.webp"
-        alt="Skyline"
-        width={1920}
-        height={340}
-        className="absolute left-0 bottom-0 w-full h-auto z-4 pointer-events-none select-none"
-        priority
-      />
-      <div className="relative z-20 w-full flex flex-col items-center gap-10 px-4 sm:px-6">
+      <motion.div
+        ref={skylineRef}
+        style={{ y: skylineY }}
+        className="absolute left-0 bottom-0 w-full h-auto z-20 pointer-events-none select-none"
+      >
+        <Image
+          src="/images/Contact_Back.webp"
+          alt="Skyline"
+          width={1920}
+          height={340}
+          className="w-full h-auto"
+          priority
+        />
+      </motion.div>
+      <div className="relative z-10 w-full flex flex-col items-center gap-10 px-4 sm:px-6">
         <div className="w-full text-left mt-[220px] pl-content-offset studio-title">
           <h2 className="font-jetbrains text-[56px] md:text-[96px] font-thin uppercase leading-none tracking-widest mb-0" style={{ letterSpacing: '0.06em' }}>
             Contact
@@ -133,7 +146,7 @@ export default function Contact() {
       </div>
       {/* Absolutely positioned spaceship */}
       <div
-        className="absolute left-0 bottom-0 z-25 pointer-events-none"
+        className="absolute left-0 bottom-0 z-30 pointer-events-none"
         ref={parallaxRef}
       >
         <motion.div style={{ y }} className="w-[180px] md:w-[240px] lg:w-[280px] xl:w-[320px] select-none">
