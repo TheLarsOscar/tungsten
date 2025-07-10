@@ -1,12 +1,60 @@
 'use client';
 
 import Image from 'next/image';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+function StudioImageParallax({ src, alt, isVideo = false }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
+
+  if (isVideo) {
+    return (
+      <motion.div
+        ref={ref}
+        style={{ y }}
+        className="overflow-hidden w-full aspect-square flex items-center justify-center rounded"
+      >
+        <video
+          src={src}
+          className="rounded object-cover w-full h-full"
+          style={{ width: '100%', height: '100%' }}
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label={alt}
+        />
+      </motion.div>
+    );
+  }
+
+  return (
+    <div ref={ref} className="w-full h-auto rounded overflow-hidden">
+      <motion.div style={{ y }}>
+        <Image
+          src={src}
+          alt={alt}
+          width={480}
+          height={360}
+          className="rounded"
+          style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+          priority
+        />
+      </motion.div>
+    </div>
+  );
+}
 
 export default function Studio() {
   return (
     <section
       id="studio"
-      className="w-full pt-gap-2xl pb-gap-2xl bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
+      className="w-full pt-gap-2xl pb-gap-2xl bg-gradient-to-bl from-tungstenOrange to-[#FF5F5F] text-white"
     >
       <div className="max-w-container mx-auto w-full px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -19,15 +67,7 @@ export default function Studio() {
             </h2>
           </div>
           <div className="lg:col-span-8 col-span-1 flex items-center order-1 lg:order-1">
-            <Image
-              src="/images/studio-01-left.png"
-              alt="Studio scene left"
-              width={480}
-              height={360}
-              className="rounded"
-              style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-              priority
-            />
+            <StudioImageParallax src="/images/studio-01-left.png" alt="Studio scene left" />
           </div>
           {/* Första textblock: ingress och tre brödtextstycken, med rätt klasser */}
           <div className="lg:col-span-4 col-span-1 flex flex-col self-center max-w-[340px] order-2 lg:order-2">
@@ -62,29 +102,12 @@ export default function Studio() {
             </p>
           </div>
           <div className="lg:col-span-8 col-span-1 flex items-center order-3 lg:order-4">
-            <Image
-              src="/images/studio-02-right.png"
-              alt="Studio scene right"
-              width={480}
-              height={360}
-              className="rounded"
-              style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
-              priority
-            />
+            <StudioImageParallax src="/images/studio-02-right.png" alt="Studio scene right" />
           </div>
 
           {/* Ändring: Bilden i tredje sektionen är utbytt mot en video enligt instruktion */}
           <div className="lg:col-span-8 col-span-1 flex items-center order-5 lg:order-5">
-            <video
-              src="/images/studio-03-left.mp4"
-              className="rounded object-cover w-full h-auto aspect-square"
-              style={{ width: '100%', height: 'auto' }}
-              autoPlay
-              loop
-              muted
-              playsInline
-              aria-label="Studio scene left (video)"
-            />
+            <StudioImageParallax src="/images/studio-03-left.mp4" alt="Studio scene left (video)" isVideo />
           </div>
           {/* Tredje textblock: ingress och resterande brödtextstycken */}
           <div className="lg:col-span-4 col-span-1 flex flex-col self-center max-w-[340px] order-6 lg:order-6">

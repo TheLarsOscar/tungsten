@@ -49,6 +49,33 @@ const workItems = [
   },
 ];
 
+function WorkImageParallax({ image, title }: { image: string; title: string }) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [-60, 60]);
+  return (
+    <div
+      ref={ref}
+      className="overflow-hidden h-image md:h-image w-full flex items-center justify-center"
+      style={{ width: '100%' }}
+    >
+      <motion.div style={{ y, width: '100%' }}>
+        <Image
+          src={image}
+          alt={title}
+          width={480}
+          height={540}
+          className="rounded w-full object-cover h-hero-img max-w-img md:max-w-none"
+          priority
+        />
+      </motion.div>
+    </div>
+  );
+}
+
 export default function Work() {
   const parallaxRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -60,7 +87,7 @@ export default function Work() {
   return (
     <section
       id="work"
-      className="w-full pt-gap-2xl pb-gap-2xl bg-[url('/background/bg-metal-hero.png')] bg-cover bg-center text-white"
+      className="w-full pt-gap-2xl pb-gap-2xl bg-gradient-to-bl from-tungstenOrange to-[#FF5F5F] text-white"
     >
       <div className="max-w-container mx-auto w-full px-6">
         {/* Rubrik med underline och spacing */}
@@ -102,42 +129,7 @@ export default function Work() {
               </div>
               {/* IMAGEBLOCK */}
               <div className="flex-1 flex items-center md:items-stretch">
-                {/* Bildwrapper med overflow-hidden och fast höjd */}
-                {(() => {
-                  // Use a ref for each image to track its scroll position
-                  const React = require('react');
-                  const { useRef } = React;
-                  const ref = useRef(null);
-                  // Use framer-motion hooks
-                  // Each image gets its own scroll progress
-                  // We use the same offset for each
-                  // Needs to be inside a component function
-                  // eslint-disable-next-line react-hooks/rules-of-hooks
-                  const { scrollYProgress } = useScroll({
-                    target: ref,
-                    offset: ["start end", "end start"],
-                  });
-                  // eslint-disable-next-line react-hooks/rules-of-hooks
-                  const y = useTransform(scrollYProgress, [0, 1], [-60, 60]);
-                  return (
-                    <div
-                      ref={ref}
-                      className="overflow-hidden h-image md:h-image w-full flex items-center justify-center"
-                      style={{ width: '100%' }}
-                    >
-                      <motion.div style={{ y, width: '100%' }}>
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          width={480}
-                          height={540}
-                          className="rounded w-full object-cover h-hero-img max-w-img md:max-w-none"
-                          priority
-                        />
-                      </motion.div>
-                    </div>
-                  );
-                })()}
+                <WorkImageParallax image={item.image} title={item.title} />
               </div>
             </div>
           ))}

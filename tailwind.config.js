@@ -2,6 +2,10 @@
 module.exports = {
   safelist: [
     'scroll-mt-nav',
+    'flex-[0.7]',
+    'flex-[0.15]',
+    'flex-[0.075]',
+    'flex-1'
   ],
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
