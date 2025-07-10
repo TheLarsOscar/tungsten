@@ -1,10 +1,18 @@
 'use client';
 
+'use client';
+
+type StudioImageParallaxProps = {
+  src: string;
+  alt: string;
+  isVideo?: boolean;
+};
+
 import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-function StudioImageParallax({ src, alt, isVideo = false }) {
+function StudioImageParallax({ src, alt, isVideo = false }: StudioImageParallaxProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
